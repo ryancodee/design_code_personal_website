@@ -5,3 +5,52 @@
 
     @media (max-width: 775px)
         display: block
+
+// flex home sections so it won't shrink home-wrap; affects how columns are displayed
+.home-sections
+    flex: 1
+
+    section
+        padding: 50px 0
+
+    .flex
+        display: flex
+        flex-direction: rows
+
+    .flex--center
+        justify-content: center
+
+    .flex--space-around
+        justify-content: space-around
+
+    .order-first
+        order: -1
+
+// columns
+// normal 2 columns
+.col-1
+    max-width: 300px
+    margin: 0 10px
+    background: pink
+
+// column that occupies the whole section
+.col-2
+    max-width: 620px
+    margin: 0 10px
+    background: honeydew
+
+//50% width column
+.col-50
+    width: 50%
+    background: yellow
+
+// stack the columns when small screen
+@media (max-width: 640px)
+    .home-sections .flex
+        display: block
+
+    .col-1
+        max-width: 100%
+
+    .col-50
+        width: auto
